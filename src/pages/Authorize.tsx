@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { IdentityProvider, useStytchUser } from '@stytch/react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
+const POST_AUTH_REDIRECT_KEY = 'post_auth_redirect';
+
 const Authorize = () => {
   const { user, fromCache } = useStytchUser();
   const location = useLocation();
@@ -9,8 +11,8 @@ const Authorize = () => {
 
   useEffect(() => {
     if (user || fromCache) return;
-    const originalUrl = `${location.pathname}${location.search}`;
-    navigate(`/?redirect_to=${encodeURIComponent(originalUrl)}`, { replace: true });
+    localStorage.setItem(POST_AUTH_REDIRECT_KEY, `${location.pathname}${location.search}`);
+    navigate('/', { replace: true });
   }, [user, fromCache, location, navigate]);
 
   if (!user) return null;

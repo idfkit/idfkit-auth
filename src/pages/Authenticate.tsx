@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import { useStytch, useStytchUser } from '@stytch/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
+const POST_AUTH_REDIRECT_KEY = 'post_auth_redirect';
+
 const Authenticate = () => {
   const stytch = useStytch();
   const { user } = useStytchUser();
@@ -22,9 +24,10 @@ const Authenticate = () => {
 
   useEffect(() => {
     if (!user) return;
-    const redirectTo = params.get('redirect_to');
-    navigate(redirectTo ?? '/', { replace: true });
-  }, [user, params, navigate]);
+    const next = localStorage.getItem(POST_AUTH_REDIRECT_KEY);
+    localStorage.removeItem(POST_AUTH_REDIRECT_KEY);
+    navigate(next ?? '/', { replace: true });
+  }, [user, navigate]);
 
   return <p>Signing you in…</p>;
 };
