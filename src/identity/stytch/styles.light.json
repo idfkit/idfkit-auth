@@ -1,0 +1,48 @@
+{
+  "fontFamily": "Inter, system-ui, \"-apple-system\", \"Segoe UI\", Roboto, sans-serif",
+  "container": {
+    "backgroundColor": "#f8fafc",
+    "borderColor": "#e2e8f0",
+    "borderRadius": "16px",
+    "width": "400px"
+  },
+  "colors": {
+    "primary": "#0b1020",
+    "secondary": "#475569",
+    "accent": "#2563eb",
+    "success": "#15803d",
+    "warning": "#b45309",
+    "error": "#dc2626"
+  },
+  "buttons": {
+    "primary": {
+      "backgroundColor": "#2563eb",
+      "textColor": "#ffffff",
+      "borderColor": "#2563eb",
+      "borderRadius": "10px"
+    },
+    "secondary": {
+      "backgroundColor": "#f1f5f9",
+      "textColor": "#0b1020",
+      "borderColor": "#e2e8f0",
+      "borderRadius": "10px"
+    },
+    "disabled": {
+      "backgroundColor": "#f1f5f9",
+      "textColor": "#64748b",
+      "borderColor": "#e2e8f0",
+      "borderRadius": "10px"
+    }
+  },
+  "inputs": {
+    "backgroundColor": "#ffffff",
+    "textColor": "#0b1020",
+    "placeholderColor": "#64748b",
+    "borderColor": "#e2e8f0",
+    "borderRadius": "10px"
+  },
+  "hideHeaderText": false,
+  "logo": {
+    "logoImageUrl": "https://github.com/idfkit/idfkit-brand/releases/download/identity-2026.1/lockup-on-light.svg"
+  }
+}

@@ -1,9 +1,11 @@
 import { StytchLogin } from '@stytch/react';
 import { OAuthProviders, Products } from '@stytch/vanilla-js';
 import type { StytchLoginConfig } from '@stytch/vanilla-js';
+import { useWidgetStyles } from '../components/useWidgetStyles';
 
 const Login = () => {
   const redirectURL = `${window.location.origin}/authenticate`;
+  const styles = useWidgetStyles();
 
   const config: StytchLoginConfig = {
     products: [Products.emailMagicLinks, Products.oauth],
@@ -20,7 +22,7 @@ const Login = () => {
     },
   };
 
-  return <StytchLogin config={config} />;
+  return <StytchLogin config={config} styles={styles} />;
 };
 
 export default Login;

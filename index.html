@@ -3,10 +3,58 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>idfkit — Sign in</title>
+    <title>idfkit Sign in</title>
+    <meta name="description" content="The sign-in page for the hosted idfkit services." />
+    <!-- idfkit identity identity-2026.1: the favicon set, both theme colours and the social image of https://auth.idfkit.com. Paths are relative to the host's root; the identity-adopt skill rewrites the prefix where a host serves this directory elsewhere. -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#060a14">
+    <meta property="og:image" content="https://auth.idfkit.com/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://auth.idfkit.com/og.png">
   </head>
   <body>
+    <!-- The masters of idfkit-brand/marks (mark.svg, wordmark.svg) in currentColor, defined once;
+         the lockups below and in src/components/Lockup.tsx reference them. -->
+    <svg class="idfkit-sprite" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <symbol id="idfkit-mark" viewBox="0 0 48 48">
+        <path fill="currentColor" d="M4 15a3 3 0 0 1 3-3h17v12h12v17a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3Z"/>
+        <path fill="currentColor" d="M34 4h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-8a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z"/>
+      </symbol>
+      <symbol id="idfkit-wordmark" viewBox="0 0 234.36 78.17">
+        <path fill="currentColor" transform="translate(-5.32 77.39)" d="M5.62 0.00V-54.59H22.66V0.00ZM14.11 -60.99Q10.50 -60.99 7.91 -63.38Q5.32 -65.77 5.32 -69.19Q5.32 -72.61 7.91 -75.00Q10.50 -77.39 14.11 -77.39Q17.77 -77.39 20.36 -75.00Q22.95 -72.61 22.95 -69.19Q22.95 -65.77 20.36 -63.38Q17.77 -60.99 14.11 -60.99ZM50.21 0.78Q44.16 0.78 39.18 -2.37Q34.20 -5.52 31.27 -11.74Q28.34 -17.97 28.34 -27.25Q28.34 -36.82 31.39 -43.02Q34.44 -49.22 39.40 -52.25Q44.35 -55.27 50.06 -55.27Q54.41 -55.27 57.49 -53.78Q60.56 -52.29 62.54 -49.98Q64.52 -47.66 65.54 -45.21H65.93V-72.75H82.93V0.00H66.13V-8.84H65.54Q63.93 -5.13 60.20 -2.17Q56.46 0.78 50.21 0.78ZM56.02 -12.50Q60.86 -12.50 63.59 -16.53Q66.32 -20.56 66.32 -27.25Q66.32 -34.03 63.61 -37.99Q60.90 -41.94 56.02 -41.94Q51.09 -41.94 48.48 -37.92Q45.87 -33.89 45.87 -27.25Q45.87 -20.61 48.48 -16.55Q51.09 -12.50 56.02 -12.50ZM123.13 -54.59V-41.94H112.19V0.00H95.25V-41.94H86.07V-54.59H95.25V-57.52Q95.25 -66.89 100.42 -71.53Q105.60 -76.17 113.80 -76.17Q117.41 -76.17 120.59 -75.61Q123.76 -75.05 125.28 -74.61L122.54 -62.16Q121.56 -62.40 120.25 -62.62Q118.93 -62.84 117.61 -62.84Q114.58 -62.84 113.39 -61.45Q112.19 -60.06 112.19 -57.67V-54.59ZM128.17 0.00V-72.75H145.21V-34.86H145.99L161.62 -54.59H181.00L161.52 -30.76L181.79 0.00H162.11L148.83 -20.85L145.21 -16.55V0.00ZM183.95 0.00V-54.59H200.99V0.00ZM192.45 -60.99Q188.83 -60.99 186.24 -63.38Q183.66 -65.77 183.66 -69.19Q183.66 -72.61 186.24 -75.00Q188.83 -77.39 192.45 -77.39Q196.11 -77.39 198.70 -75.00Q201.28 -72.61 201.28 -69.19Q201.28 -65.77 198.70 -63.38Q196.11 -60.99 192.45 -60.99ZM238.21 -54.59V-41.94H228.40V-16.70Q228.40 -12.45 232.74 -12.45Q233.62 -12.45 235.21 -12.67Q236.80 -12.89 237.48 -13.04L239.68 -0.63Q236.80 0.20 234.11 0.49Q231.43 0.78 229.03 0.78Q220.34 0.78 215.85 -3.30Q211.36 -7.37 211.36 -15.19V-41.94H204.13V-54.59H211.36V-67.58H228.40V-54.59Z"/>
+      </symbol>
+    </svg>
+    <header class="idfkit-head">
+      <a class="idfkit-lockup" href="/" aria-label="idfkit Sign in">
+        <svg class="idfkit-mark" viewBox="0 0 338.36 80.78" aria-hidden="true" focusable="false">
+          <use href="#idfkit-mark" x="-8" y="-8" width="96" height="96"/>
+          <use href="#idfkit-wordmark" x="104" y="2.61" width="234.36" height="78.17"/>
+        </svg>
+        <span class="idfkit-lockup-divider" aria-hidden="true"></span>
+        <span class="idfkit-lockup-name">Sign in</span>
+      </a>
+    </header>
     <div id="root"></div>
+    <footer class="idfkit-foot">
+      <!-- The seven family links, in order (FR-019), from src/identity/css/family-links.html. The
+           sign-in host is not among them, so none is current. -->
+      <nav aria-label="idfkit" class="idfkit-family">
+        <a href="https://idfkit.com">idfkit</a>
+        <a href="https://developers.idfkit.com">Developers</a>
+        <a href="https://docs.idfkit.com">EnergyPlus docs</a>
+        <a href="https://app.idfkit.com">Envelop</a>
+        <a href="https://mcp.idfkit.com">MCP</a>
+        <a href="https://shoebox.idfkit.com">Shoebox</a>
+        <a href="https://github.com/idfkit">GitHub</a>
+      </nav>
+      <p class="idfkit-ownership">An idfkit project. MIT License.</p>
+    </footer>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
