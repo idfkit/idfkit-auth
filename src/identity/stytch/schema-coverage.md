@@ -1,4 +1,4 @@
-# Style coverage of the sign-in widget (identity-2026.1)
+# Style coverage of the sign-in widget (identity-2026.2)
 
 Schema: `@stytch/core` 2.66.1, `StyleConfig`, read on 2026-10-30.
 
