@@ -35,7 +35,7 @@ Schema: `@stytch/core` 2.66.1, `StyleConfig`, read on 2026-10-30.
 | `inputs.borderRadius` | `10px` |
 | `fontFamily` | `Inter, system-ui, "-apple-system", "Segoe UI", Roboto, sans-serif` |
 | `hideHeaderText` | `False` |
-| `logo.logoImageUrl` | `https://github.com/idfkit/idfkit-brand/releases/download/identity-2026.1/lockup-on-dark.svg` |
+| `logo.logoImageUrl` | not set |
 
 ## Not expressible
 
@@ -43,7 +43,7 @@ Parts of the standard the schema has no property for. Each is an Exception under
 
 | Part | Why |
 | ---- | --- |
-| `marks/mark.svg` | the widget takes a logo image by URL; the mark cannot be inlined in currentColor or sized by the page |
+| `marks/mark.svg` | the widget's logo slot takes an image by URL and is left unset; the page's header carries the lockup |
 | `font.family.code` | the schema takes one fontFamily for all text; code and labels cannot be set in the label face |
 | `font.weight.semibold` | the schema takes a family, not weights; buttons and headings render at the widget's own weights |
 | `color.role.focus` | the widget draws its own focus ring; the schema exposes no focus colour |

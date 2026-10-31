@@ -41,8 +41,5 @@
     "borderColor": "#e2e8f0",
     "borderRadius": "10px"
   },
-  "hideHeaderText": false,
-  "logo": {
-    "logoImageUrl": "https://github.com/idfkit/idfkit-brand/releases/download/identity-2026.1/lockup-on-light.svg"
-  }
+  "hideHeaderText": false
 }
