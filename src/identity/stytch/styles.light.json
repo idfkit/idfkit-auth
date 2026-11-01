@@ -4,7 +4,7 @@
     "backgroundColor": "#f8fafc",
     "borderColor": "#e2e8f0",
     "borderRadius": "16px",
-    "width": "400px"
+    "width": "100%"
   },
   "colors": {
     "primary": "#0b1020",

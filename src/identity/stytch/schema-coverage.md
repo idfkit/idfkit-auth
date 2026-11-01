@@ -1,4 +1,4 @@
-# Style coverage of the sign-in widget (identity-2026.3)
+# Style coverage of the sign-in widget (identity-2026.4)
 
 Schema: `@stytch/core` 2.66.1, `StyleConfig`, read on 2026-10-30.
 
@@ -9,7 +9,7 @@ Schema: `@stytch/core` 2.66.1, `StyleConfig`, read on 2026-10-30.
 | `container.backgroundColor` | `#0c1222` |
 | `container.borderColor` | `#141d35` |
 | `container.borderRadius` | `16px` |
-| `container.width` | `400px` |
+| `container.width` | `100%` |
 | `colors.primary` | `#e2e8f0` |
 | `colors.secondary` | `#94a3b8` |
 | `colors.accent` | `#3b82f6` |
