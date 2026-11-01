@@ -4,6 +4,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { StytchProvider } from '@stytch/react';
 import { StytchUIClient } from '@stytch/vanilla-js';
 import App from './App';
+import './styles/sign-in.css';
 
 const stytch = new StytchUIClient(import.meta.env.VITE_STYTCH_PUBLIC_TOKEN);
 

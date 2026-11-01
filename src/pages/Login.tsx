@@ -22,7 +22,11 @@ const Login = () => {
     },
   };
 
-  return <StytchLogin config={config} styles={styles} />;
+  return (
+    <div className="sign-in-widget">
+      <StytchLogin config={config} styles={styles} />
+    </div>
+  );
 };
 
 export default Login;

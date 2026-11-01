@@ -18,7 +18,11 @@ const Authorize = () => {
   }, [user, fromCache, location, navigate]);
 
   if (!user) return null;
-  return <IdentityProvider styles={styles} />;
+  return (
+    <div className="sign-in-widget">
+      <IdentityProvider styles={styles} />
+    </div>
+  );
 };
 
 export default Authorize;
