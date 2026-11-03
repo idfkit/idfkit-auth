@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check": "node scripts/check-design-rules.mjs"
   },
   "dependencies": {
     "@stytch/react": "^19.5.2",
@@ -22,5 +23,8 @@
     "@vitejs/plugin-react": "^4.3.3",
     "typescript": "^5.6.3",
     "vite": "^6.0.1"
+  },
+  "idfkit": {
+    "identity": "identity-2026.4"
   }
 }

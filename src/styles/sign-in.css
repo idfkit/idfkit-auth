@@ -1,0 +1,78 @@
+/*
+ * The page around the sign-in widget: the header with the lockup and the footer with the family links
+ * and the ownership line (index.html). The identity comes from the vendored derivation; this file reads
+ * --idfkit-* properties and declares no colour, face or easing of its own. The widget takes its width
+ * from the page, up to the 400px it was designed at, so it fits a phone.
+ */
+@import '../identity/css/tokens.css';
+@import '../identity/css/fonts.css';
+@import '../identity/css/motion.css';
+@import '../identity/css/forced-colors.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  background: var(--idfkit-color-ground);
+  color: var(--idfkit-color-ink);
+  font-family: var(--idfkit-font-text);
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.idfkit-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  height: 56px;
+  padding: 0 var(--idfkit-space-2);
+  border-bottom: 1px solid var(--idfkit-color-border);
+}
+
+#root {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  padding: var(--idfkit-space-3) var(--idfkit-space-2);
+}
+
+.sign-in-widget {
+  width: 100%;
+  max-width: 400px;
+}
+
+.idfkit-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--idfkit-space-1) var(--idfkit-space-3);
+  padding: var(--idfkit-space-2);
+  border-top: 1px solid var(--idfkit-color-border);
+  font-size: 12px;
+  color: var(--idfkit-color-ink-muted);
+}
+
+.idfkit-family {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--idfkit-space-1) var(--idfkit-space-2);
+}
+
+.idfkit-family a {
+  color: var(--idfkit-color-ink-muted);
+  text-decoration: none;
+}
+
+.idfkit-family a:hover {
+  color: var(--idfkit-color-link);
+}
+
+.idfkit-ownership {
+  margin: 0;
+  color: var(--idfkit-color-ink-label);
+}

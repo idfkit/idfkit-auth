@@ -3,10 +3,41 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>idfkit — Sign in</title>
+    <title>idfkit Sign in</title>
+    <meta name="description" content="The sign-in page for the hosted idfkit services." />
+    <!-- idfkit identity identity-2026.4: the favicon set, both theme colours and the social image of https://auth.idfkit.com. Paths are relative to the host's root; the identity-adopt skill rewrites the prefix where a host serves this directory elsewhere. -->
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#060a14">
+    <meta property="og:image" content="https://auth.idfkit.com/og.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://auth.idfkit.com/og.png">
+    <link rel="stylesheet" href="/src/identity/hosts/auth.idfkit.com/lockup.css" />
   </head>
   <body>
+    <header class="idfkit-head">
+      <a class="idfkit-lockup" href="/" aria-label="idfkit Sign in"></a>
+    </header>
     <div id="root"></div>
+    <footer class="idfkit-foot">
+      <!-- The seven family links, in order (FR-019), from src/identity/css/family-links.html. The
+           sign-in host is not among them, so none is current. -->
+      <nav aria-label="idfkit" class="idfkit-family">
+        <a href="https://idfkit.com">idfkit</a>
+        <a href="https://developers.idfkit.com">Developers</a>
+        <a href="https://docs.idfkit.com">EnergyPlus docs</a>
+        <a href="https://app.idfkit.com">Envelop</a>
+        <a href="https://mcp.idfkit.com">MCP</a>
+        <a href="https://shoebox.idfkit.com">Shoebox</a>
+        <a href="https://github.com/idfkit">GitHub</a>
+      </nav>
+      <p class="idfkit-ownership">An idfkit project.</p>
+    </footer>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
